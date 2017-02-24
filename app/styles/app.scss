@@ -8,36 +8,28 @@ $detail-color: #595959;
 $accent-color: #FF6B35;
 $heading-color: #1A535C;
 
-body {
-  font: 100% $font-stack;
+.flex-wrap {
+  font:100% $font-stack;
   color: $primary-color;
+  
   background-color: $background-color;
-  width:100vw;
-  height:100vh;
+
+  display:flex;
+  flex-direction:row;
+  min-height:100vh;
+  min-width:100vw;
   margin:0;
   padding:0;
 }
 
-.flex-wrap {
-
-	display: flex;
-	flex-direction: row;
-	min-height: 100vh;
-}
-
 .main-content {
-
-	flex: 1;
+  flex: 1;
+  -webkit-flex: 1; /* Safari 6.1+ */
+  -ms-flex: 1; /* IE 10 */ 
 } 
 
-footer{
-	color: $background-color;
-	padding: 10px;
-}
-
 nav{
-
-	text-align: right;
+  text-align: right;
 }
 
 .image {
@@ -59,21 +51,18 @@ nav{
 	background-image:url('/assets/images/prof-img-color.png');
 }
 */
+.social-media{
+  text-align: right;
+  margin:10px;
+}
+
 .link, .link:visited, .link:active, .link:hover{
-	color: $heading-color !important;
-	transition: 1s ease !important;
-	text-decoration: none !important;
+  color: $heading-color !important;
+  transition: 1s ease !important;
+  text-decoration: none !important;
 }
 .link:hover{
 	color: $accent-color !important;
-}
-
-.proj-details{
-  display:block;
-  width:33vw;
-  margin: 0 auto;	
-  position: relative;
-  top: 12vh;
 }
 
 .detail {
@@ -85,30 +74,50 @@ nav{
 }
 
 .heading{
-	padding-top: 5px;
-	color: $heading-color;
-	text-align: center;
+  padding-top: 5px;
+  color: $heading-color;
+  text-align: center;
 }
 
 .jumbo{
-	height: 100px;
-	background-color: $primary-color;
-	padding:10px;
-	margin:0;
+  height:10vh;
+  min-width: 100vw;
+  background-color: $primary-color;
+  padding:10px;
+  margin:0;
+  color: $background-color;
+  padding: 10px;
+}
+
+.content-wrapper{
+  min-width: 100vw;
+  height: 80vh;
+  display: inline-block;
 }
 
 .project-wrapper{
-  position:relative;
+  position: relative;
+  min-width:30vw;
+  max-width:40vw;
+  height:40vh;
+  margin: 20vh auto 0;
+}
+
+.project-details{
   margin:0;
   background-color: $detail-color;
   padding: 10px;
   padding-top: 0;
 }
+
 .project{
-	margin:0;
-	display:block;
+  margin:0;
+  display:block;
 }
 
+/*
+  Carousel Buttons
+*/
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -128,12 +137,14 @@ nav{
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 .prev:hover, .next:hover {
   color: $heading-color;
   background-color: rgba(89,89,89,0.8);
 }
 
+/*
+  Transition Animations 
+*/
 .fade-in {
   opacity:0;
   animation: fade-in 5s forwards;
