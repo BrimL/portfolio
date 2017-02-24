@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<header class="jumbo">
+  {{#link-to 'index'}} <div class='image' ></div>{{/link-to}}
+  <nav>
+    {{#link-to 'contact' class='link'}} <h4>Keep in Contact</h4>{{/link-to}}
+  </nav>
+</header>
 
-{{outlet}}
+<main class="container proj-details">
+  <div class="row">
+    {{outlet}}
+  </div>
+</main>
+
+<footer class='jumbo'>
+  Placeholder teaxt. Maybe put some minor information down here? Or some nice Social Media links. 
+</footer>

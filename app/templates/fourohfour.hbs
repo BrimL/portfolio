@@ -1,0 +1,11 @@
+actions: {
+  error: function (error) {
+    Ember.Logger.error(error);
+    this.transitionTo('/fourohfour');
+  }
+}
+
+<div>
+  <h2>Four Oh Four!</h2>
+  <p>You seem lost, we should fix that together.</p>
+</div>

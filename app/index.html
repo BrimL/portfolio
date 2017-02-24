@@ -14,8 +14,10 @@
 
     {{content-for "head-footer"}}
   </head>
-  <body>
-    {{content-for "body"}}
+  <body class="flex-wrap">
+    <div class="main-content">
+      {{content-for "body"}}
+    </div>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/portfolio.js"></script>

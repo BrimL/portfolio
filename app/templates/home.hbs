@@ -1,0 +1,8 @@
+<div class="panel col-xs-12 project-wrapper">
+  {{#each model as |projectUnit|}}
+    {{project-item project=projectUnit}}
+  {{/each}}
+  <a class="prev" onclick="nextProject(-1)">&#10094;</a>
+  <a class="next" onclick="nextProject(1)">&#10095;</a>
+</div>
+<br>

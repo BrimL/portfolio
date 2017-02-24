@@ -1,0 +1,167 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+
+$font-stack:    Helvetica, sans-serif;
+$background-color: #E0E0E2; 
+$primary-color: #7F7F7F;
+$detail-color: #595959;
+$accent-color: #FF6B35;
+$heading-color: #1A535C;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+  width:100vw;
+  height:100vh;
+  margin:0;
+  padding:0;
+}
+
+.flex-wrap {
+
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+}
+
+.main-content {
+
+	flex: 1;
+} 
+
+footer{
+	color: $background-color;
+	padding: 10px;
+}
+
+nav{
+
+	text-align: right;
+}
+
+.image {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /*transition: 1s ease !important;
+  need to update image size as well*/
+  background-image: url('/assets/images/prof-img-sans-color.png');
+  
+}
+
+/*
+.image:hover{
+	background-image:url('/assets/images/prof-img-color.png');
+}
+*/
+.link, .link:visited, .link:active, .link:hover{
+	color: $heading-color !important;
+	transition: 1s ease !important;
+	text-decoration: none !important;
+}
+.link:hover{
+	color: $accent-color !important;
+}
+
+.proj-details{
+  display:block;
+  width:33vw;
+  margin: 0 auto;	
+  position: relative;
+  top: 12vh;
+}
+
+.detail {
+  color: $detail-color;
+  padding: 4px 6px;
+  bottom: 4px;
+  width: 100%;
+  text-align: left;
+}
+
+.heading{
+	padding-top: 5px;
+	color: $heading-color;
+	text-align: center;
+}
+
+.jumbo{
+	height: 100px;
+	background-color: $primary-color;
+	padding:10px;
+	margin:0;
+}
+
+.project-wrapper{
+  position:relative;
+  margin:0;
+  background-color: $detail-color;
+  padding: 10px;
+  padding-top: 0;
+}
+.project{
+	margin:0;
+	display:block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: $accent-color;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(89,89,89,0.4);
+}
+.prev {left:0;}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: $heading-color;
+  background-color: rgba(89,89,89,0.8);
+}
+
+.fade-in {
+  opacity:0;
+  animation: fade-in 5s forwards;
+  -moz-animation: fade-in 5s forwards;
+  -webkit-animation: fade-in 5s forwards;
+}
+@-webkit-keyframes fade-in {
+  96%, 100% {opacity:1;}
+}
+@-moz-keyframes fade-in {
+  96%, 100% {opacity:1;}
+}
+@keyframes fade-in {
+  96%, 100% {opacity:1;}
+}
+
+.fade-out {
+  opacity:1;
+  animation: fade-out 5s 5s forwards;
+  -moz-animation: fade-out 5s 5s forwards;
+  -webkit-animation: fade-out 5s 5s forwards;
+}
+@-webkit-keyframes fade-out {
+  96%, 100% {opacity:0;}
+}
+@-moz-keyframes fade-out {
+  96%, 100% {opacity:0;}
+}
+@keyframes fade-out {
+  96%, 100% {opacity:0;}
+}
